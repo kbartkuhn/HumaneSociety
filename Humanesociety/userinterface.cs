@@ -61,12 +61,12 @@ namespace Humanesociety
                     adopt.displaydoglist();
                     Console.WriteLine("Which dog would you like to adopt?");
                     string dogchoice = Console.ReadLine();
-                    foreach (Dog dog in adopt.listofdogs)
+                    foreach (Dog dog in adopt.DogCages)
                     {
 
                         if (dogchoice.Equals(dog.nameofanimal, StringComparison.CurrentCultureIgnoreCase))
                         {
-                            adopt.listofdogs.Remove(dog);
+                            adopt.DogCages.Remove(dog);
                             Console.WriteLine("Congradulations you have adopted {0}", dog.nameofanimal);
                             Console.WriteLine("The adoption fee for animal in this shelter is $250");
                             adopt.adoptionfee();
@@ -79,11 +79,11 @@ namespace Humanesociety
                     adopt.displaycatlist();
                     Console.WriteLine("Which cat would you like to adopt? Please enter the cats name to continue.");
                     string catchoice = Console.ReadLine();
-                    foreach (Cat cat in adopt.listofcats)
+                    foreach (Cat cat in adopt.CatCages)
                     {
                         if (catchoice.Equals(cat.nameofanimal, StringComparison.CurrentCultureIgnoreCase))
                         {
-                            adopt.listofcats.Remove(cat);
+                            adopt.CatCages.Remove(cat);
                             Console.WriteLine("Congradulations, you have adopted {0}, he's a stupid cat", cat.nameofanimal);
                             adopt.adoptionfee();
                             afteradoption();
