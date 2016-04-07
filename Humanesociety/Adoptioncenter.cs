@@ -21,12 +21,14 @@ namespace Humanesociety
             return bankaccount;
         }
 
+
+       Dog fernando = new Dog("Fernando", "Blacklab", 1, 1, 3);
         public void adddogs()
         {
             DogCages.Add(new Dog("Fuzzy", "Yellowlab", 1, 1, 3));
             DogCages.Add(new Dog("Spots", "Rotweiler", 2, 1, 3));
-            DogCages.Add(new Dog("Tim", "blacklab", 1, 1, 3));
-            DogCages.Add(new Dog("Jimbobaggins", "rotweiler", 1, 3, 5));
+            DogCages.Add(fernando);
+            DogCages.Add(new Dog("Jimbobaggins", "Rotweiler", 1, 3, 5));
         }
 
 
@@ -35,7 +37,9 @@ namespace Humanesociety
             Console.WriteLine("Here are all the cats we currently have for adoption");
             foreach (Cat cat in CatCages)
             {
-                Console.WriteLine("Name : {0} Breed : {1}", cat.nameofanimal, cat.breed);
+                Console.WriteLine("Name: {0}", cat.nameofanimal);
+                Console.WriteLine("Breed : {0}", cat.breed);
+                Console.WriteLine("");
             }
         }
 
@@ -44,7 +48,9 @@ namespace Humanesociety
             Console.WriteLine("Here are all the dogs we currently have for adoption.");
             foreach (Dog dog in DogCages)
             {
-                Console.WriteLine("Name : {0} Breed : {1}", dog.nameofanimal, dog.breed);
+                Console.WriteLine("Name: {0}", dog.nameofanimal);
+                Console.WriteLine("Breed : {0}", dog.breed);
+                Console.WriteLine("");
             }
         }
         public int adddog()
@@ -60,10 +66,10 @@ namespace Humanesociety
 
         public List<Cat> CatCages = new List<Cat>();
 
-        Cat tom = new Cat("tom", "siemese", 1, 2, 2);
-        Cat lucy = new Cat("lucy", "calico", 1, 2, 2);
-        Cat sparkles = new Cat("Sparkles", "britishshorthair", 2, 1, 1);
-        Cat princess = new Cat("princess", "mainecoon", 1, 1, 1);
+        Cat tom = new Cat("Tom", "Siemese", 1, 2, 2);
+        Cat lucy = new Cat("Lucy", "Calico", 1, 2, 2);
+        Cat sparkles = new Cat("Sparkles", "British Shorthair", 2, 1, 1);
+        Cat princess = new Cat("Princess", "Maine Coon", 1, 1, 1);
         public void addcats()
         {
             CatCages.Add(tom);

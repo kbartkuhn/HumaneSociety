@@ -24,7 +24,8 @@ namespace Humanesociety
         public int startingstuff()
         {
             Console.WriteLine("Hello, welcome to the Humane Society.");
-            Console.WriteLine("To adopt an animal enter [1], to drop off an animal enter [2]");
+            Console.WriteLine("[1]To adopt an animal");
+            Console.WriteLine("[2]to put an animal up for adoption");
             choice = int.Parse(Console.ReadLine());
             return choice;
         }
@@ -33,29 +34,27 @@ namespace Humanesociety
             if (choice == 1)
             {
                 person.addtoadopterlist();
-                if (adopter.typeofspecies == 1)
+                if (person.animalofinterest==1)
                 {
                     adopt.displaydoglist();
-                    Console.WriteLine("Which dog would you like to adopt?");
+                    Console.WriteLine("Which dog would you like to adopt? Please enter the dogs name to continue.");
                     string dogchoice = Console.ReadLine();
                     foreach (Dog dog in adopt.DogCages)
                     {
-                        if (dogchoice.Equals(dog.nameofanimal, StringComparison.CurrentCultureIgnoreCase))
+                        if (dogchoice.Equals(dog.nameofanimal))
                         {
                             adopt.DogCages.Remove(dog);
                             Console.WriteLine("Congradulations you have adopted {0}", dog.nameofanimal);
+                            Console.WriteLine("");
                             Console.WriteLine("The adoption fee for animal in this shelter is $250");
+                            Console.ReadLine();
                             adopt.adoptionfee();
                             afteradoption();
                         }
-                        else
-                        {
-                            Console.WriteLine("That was an invalid entry, please try again.");
-                            adoptionmenu();
-                        }
+                       
                     }
                 }
-                else if (adopter.typeofspecies == 2)
+                else if (person.animalofinterest==2)
                 {
                     adopt.displaycatlist();
                     Console.WriteLine("Which cat would you like to adopt? Please enter the cats name to continue.");
@@ -65,7 +64,10 @@ namespace Humanesociety
                         if (catchoice.Equals(cat.nameofanimal, StringComparison.CurrentCultureIgnoreCase))
                         {
                             adopt.CatCages.Remove(cat);
-                            Console.WriteLine("Congradulations, you have adopted {0}, he's a stupid cat", cat.nameofanimal);
+                            Console.WriteLine("Congradulations, you have adopted {0}", cat.nameofanimal);
+                            Console.WriteLine("");
+                            Console.WriteLine("The adoption fee for the cat is $250");
+                            Console.ReadLine();
                             adopt.adoptionfee();
                             afteradoption();
                         }
@@ -79,7 +81,9 @@ namespace Humanesociety
             }
             else if (choice == 2)
             {
-                Console.WriteLine("Are you dropping off a cat or a dog? 1 for dog, 2 for cat");
+                Console.WriteLine("What type of animal are you putting up for adoption?");
+                Console.WriteLine("[1] for dog");
+                Console.WriteLine("[2] for cat");
                 int dropoffchoice = int.Parse(Console.ReadLine());
                 if (dropoffchoice == 1)
                 {

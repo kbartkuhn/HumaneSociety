@@ -29,7 +29,8 @@ namespace Humanesociety
     public int getspeciestype()
         {
             Console.WriteLine("What type of species are you interested in adopting?");
-            Console.WriteLine("1 for dogs or 2 for cats");
+            Console.WriteLine("[1] for dogs"); 
+            Console.WriteLine("[2] for cats");
             int getspecies = int.Parse(Console.ReadLine());
             return getspecies;
         }

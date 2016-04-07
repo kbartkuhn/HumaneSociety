@@ -11,7 +11,7 @@ namespace Humanesociety
         static void Main(string[] args)
         {
             userinterface user = new userinterface();
-            Adoptioncenter adoption = new Adoptioncenter();
+           
 
             user.addanimals();
             user.startingstuff();

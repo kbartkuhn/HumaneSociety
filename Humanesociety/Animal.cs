@@ -36,7 +36,9 @@ namespace Humanesociety
         }
         public int animalhaveshots()
         {
-            Console.WriteLine("Is the animal up to date on its shots? Please enter 1 for yes and 2 for no");
+            Console.WriteLine("Is the animal up to date on its shots?");
+            Console.WriteLine("[1] for yes");
+            Console.WriteLine("[2] for no");
             shots = int.Parse(Console.ReadLine());
             return shots;
         }
