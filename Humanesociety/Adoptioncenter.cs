@@ -8,7 +8,7 @@ namespace Humanesociety
 {
     class Adoptioncenter : Animal
     {
-        public List<Dog> listofdogs = new List<Dog>();
+        public List<Dog> DogCages = new List<Dog>();
 
 
 
@@ -23,17 +23,17 @@ namespace Humanesociety
 
         public void adddogs()
         {
-            listofdogs.Add(new Dog("Fuzzy", "Yellowlab", 1, 1, 3));
-            listofdogs.Add(new Dog("Spots", "Rotweiler", 2, 1, 3));
-            listofdogs.Add(new Dog("Tim", "blacklab", 1, 1, 3));
-            listofdogs.Add(new Dog("Jimbobaggins", "rotweiler", 1, 3, 5));
+            DogCages.Add(new Dog("Fuzzy", "Yellowlab", 1, 1, 3));
+            DogCages.Add(new Dog("Spots", "Rotweiler", 2, 1, 3));
+            DogCages.Add(new Dog("Tim", "blacklab", 1, 1, 3));
+            DogCages.Add(new Dog("Jimbobaggins", "rotweiler", 1, 3, 5));
         }
 
 
         public void displaycatlist()
         {
             Console.WriteLine("Here are all the cats we currently have for adoption");
-            foreach (Cat cat in listofcats)
+            foreach (Cat cat in CatCages)
             {
                 Console.WriteLine("Name : {0} Breed : {1}", cat.nameofanimal, cat.breed);
             }
@@ -42,7 +42,7 @@ namespace Humanesociety
         public void displaydoglist()
         {
             Console.WriteLine("Here are all the dogs we currently have for adoption.");
-            foreach (Dog dog in listofdogs)
+            foreach (Dog dog in DogCages)
             {
                 Console.WriteLine("Name : {0} Breed : {1}", dog.nameofanimal, dog.breed);
             }
@@ -54,11 +54,11 @@ namespace Humanesociety
             int shottyshots = animalhaveshots();
             int food = getFoodType();
             int cupsoffood = getamountoffood();
-            listofdogs.Add(new Dog(dogname, dogbreed, shottyshots, food, cupsoffood));
-            return food;
+            DogCages.Add(new Dog(dogname, dogbreed, shottyshots, food, cupsoffood));
+            return shottyshots;
         }
 
-        public List<Cat> listofcats = new List<Cat>();
+        public List<Cat> CatCages = new List<Cat>();
 
         Cat tom = new Cat("tom", "siemese", 1, 2, 2);
         Cat lucy = new Cat("lucy", "calico", 1, 2, 2);
@@ -66,10 +66,10 @@ namespace Humanesociety
         Cat princess = new Cat("princess", "mainecoon", 1, 1, 1);
         public void addcats()
         {
-            listofcats.Add(tom);
-            listofcats.Add(lucy);
-            listofcats.Add(sparkles);
-            listofcats.Add(princess);
+            CatCages.Add(tom);
+            CatCages.Add(lucy);
+            CatCages.Add(sparkles);
+            CatCages.Add(princess);
         }
         public int addacat()
         {
@@ -78,20 +78,13 @@ namespace Humanesociety
             int shots = animalhaveshots();
             int food = getFoodType();
             int cupsofstuff = getamountoffood();
-            listofcats.Add(new Cat(catname, catbreed, shots, food, cupsofstuff));
-            int catindex = (listofcats.Count() - 1);
-            return catindex;
+            CatCages.Add(new Cat(catname, catbreed, shots, food, cupsofstuff));
+            return food;
         }
 
-        public List<Cage> cages;
-        public Adoptioncenter()
-        {
-            cages = new List<Cage>();
-        }
-        public void addAnimal(Animal animal)
-        {
-            cages.Add(new Cage(animal));
-        }
+        
+        
+   
     }
 
 }

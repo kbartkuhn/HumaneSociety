@@ -21,7 +21,11 @@ namespace Humanesociety
      
         }
 
-
+        public int giveshot()
+        {
+            shots = 1;
+            return shots;
+        }
 
 
 

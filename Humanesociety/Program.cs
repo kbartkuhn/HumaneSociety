@@ -13,7 +13,7 @@ namespace Humanesociety
             userinterface user = new userinterface();
             Adoptioncenter adoption = new Adoptioncenter();
 
-            Console.WriteLine(adoption.cages[0].animal.nameofanimal);
+            user.addanimals();
             user.startingstuff();
             user.adoptionmenu();
 
@@ -22,7 +22,7 @@ namespace Humanesociety
     }
 }
 
-//    Must be able to add an animal to the system
+//   // Must be able to add an animal to the system
 //    Must be able to remove an animal from the system and collect money 
 //    from an adopter(object adopting an animal)
 //    Must be able to track which animals have had their shots and give animals 

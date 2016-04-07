@@ -48,11 +48,7 @@ namespace Humanesociety
             else medicalshots = false;
             return medicalshots;
         }
-        public int giveshot()
-        {
-            shots = 1;
-            return shots;
-        }
+        
         public int getamountoffood()
         {
             Console.WriteLine("How many cups of food does the animal eat per day?");

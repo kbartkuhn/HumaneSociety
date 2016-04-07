@@ -20,7 +20,11 @@ namespace Humanesociety
         }
         public List<Dog> listofdogs = new List<Dog>();
 
-       
+        public int giveshot()
+        {
+            shots = 1;
+            return shots;
+        }
 
 
 
